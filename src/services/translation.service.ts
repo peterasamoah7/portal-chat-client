@@ -14,10 +14,10 @@ export class TranslationService {
   constructor(private http: HttpClient) { }
 
   public translate(req: TranslateRequest): Observable<TranslateViewModel>{
-    return this.http.post<TranslateViewModel>(`${environment.apiUrl}/api/translate`, req); 
+    return this.http.post<TranslateViewModel>(`${environment.apiUrl}/api/translate`, req);
   }
 
   public languages(): Observable<Array<LanguageViewModel>>{
-    return this.http.get<Array<LanguageViewModel>>(`${environment.apiUrl}/api/langauges`);
+    return this.http.get<Array<LanguageViewModel>>(`${environment.apiUrl}/api/languages`);
   }
 }

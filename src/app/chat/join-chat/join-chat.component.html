@@ -1,1 +1,11 @@
-<p>join-chat works!</p>
+<div>
+    <form [formGroup]="joinForm" (ngSubmit)="joinChat()">
+        <input formControlName="name" type="text"/>
+        <div *ngIf="languages.length > 1">
+          <select formControlName="lang" [(ngModel)]="defaultLang">
+            <option [ngValue]="language" *ngFor="let language of languages">{{language.name}}</option>
+          </select>
+        </div>
+        <button type="submit">Join Chat</button>
+    </form>
+</div>
