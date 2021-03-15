@@ -4,6 +4,7 @@ import { JoinChatComponent } from './join-chat/join-chat.component';
 import { ChatComponent } from './chat/chat.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LayoutModule } from '../layout/layout.module';
 
 const routes : Routes = [
   {
@@ -18,13 +19,14 @@ const routes : Routes = [
 
 @NgModule({
   declarations: [
-    JoinChatComponent, 
+    JoinChatComponent,
     ChatComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    LayoutModule,
     RouterModule.forChild(routes)
   ]
 })

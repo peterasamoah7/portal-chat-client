@@ -1,7 +1,26 @@
-<form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
-    <input formControlName="message" type="text"/>
-    <button type="submit">Send</button>
-</form>
-<div>
-    <p *ngFor="let message of messages">{{message.user}} {{message.lang}} {{message.text}}</p>
+<div class="chat-container">
+  <app-nav></app-nav>
+  <div class="chat-window">
+    <div *ngFor="let message of messages">
+      <div class="message-box {{message.user === user ? 'right' : 'left'}}-user">
+        <div class="text-container {{message.user === user ? 'right' : 'left'}}-text">
+          <p>
+            {{message.text}}
+          </p>
+          <div class="{{message.user === user ? 'right' : 'left'}}-meta">
+            <!-- <p class="date">1 hour ago</p> -->
+          </div>
+        </div>
+        <div class="{{message.user === user ? 'right' : 'left'}}-meta">
+          <p class="username">{{message.user}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
+    <div class="chat-input-div">
+      <textarea formControlName="message" placeholder="Enter your message here" type="text" rows="1"></textarea>
+      <button type="submit">Send</button>
+    </div>
+  </form>
 </div>

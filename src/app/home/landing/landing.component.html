@@ -1,4 +1,16 @@
-<div>
-  <p>Landing page</p>
-  <a routerLink="/chat/join">Go to Join</a>
+<div class="home-container">
+  <app-nav></app-nav>
+  <div class="home-content">
+    <div class="home-text-div">
+        <h1>Live Chat made easy</h1>
+        <p>Portal Chat is a live chat application powered Azure SignalR Services.
+          Integrate live chat application in game applications, customer service and anywhere
+          your chat needs take you.
+        </p>
+        <button (click)="gotoJoinChat()">
+            Join Chat <span class="material-icons">arrow_forward</span>
+        </button>
+    </div>
+    <img src="../../../assets/chat5.png" class='banner' alt="chat" />
+  </div>
 </div>
