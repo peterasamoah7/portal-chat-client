@@ -1,11 +1,27 @@
-<div>
-    <form [formGroup]="joinForm" (ngSubmit)="joinChat()">
-        <input formControlName="name" type="text"/>
+<div class='join-container'>
+  <app-nav></app-nav>
+  <div *ngIf="!loading" class="join-content">
+      <h1>Provide user details</h1>
+      <form [formGroup]="joinForm" (ngSubmit)="joinChat()">
+        <span class="input-group">
+          <div>
+              <span class="material-icons">person</span>
+          </div>
+          <input
+              class="name-input"
+              placeholder="Unhappy Customer"
+              formControlName="name"
+          />
+        </span>
+        <div class="language-setting-div">
+            <p>Translate to:</p>
+        </div>
         <div *ngIf="languages.length > 1">
           <select formControlName="lang" [(ngModel)]="defaultLang">
             <option [ngValue]="language" *ngFor="let language of languages">{{language.name}}</option>
           </select>
         </div>
         <button type="submit">Join Chat</button>
-    </form>
+      </form>
+  </div>
 </div>

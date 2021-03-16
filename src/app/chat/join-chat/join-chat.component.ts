@@ -14,6 +14,7 @@ export class JoinChatComponent implements OnInit {
   joinForm: FormGroup;
   languages: Array<LanguageViewModel> = [];
   defaultLang: any;
+  loading: boolean = false;
 
   constructor(
     private router: Router,
@@ -32,9 +33,11 @@ export class JoinChatComponent implements OnInit {
   }
 
   initLangList(){
+    this.loading = true;
     this.translationService.languages().subscribe(l => {
       this.languages = l;
       this.defaultLang = this.languages.find(x => x.name == 'English');
+      this.loading = false;
     }, () => console.log('Api call failed'));
   }
 

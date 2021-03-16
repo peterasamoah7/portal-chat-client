@@ -1,0 +1,45 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  background: transparent;
+  padding-top: 20px;
+}
+
+.nav-container h2 {
+  color: #0061f2;
+  width: 35%;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: #757575;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-container span {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .nav-container h2 {
+    width: auto;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .nav-container span {
+    display: block;
+  }
+}
