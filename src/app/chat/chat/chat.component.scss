@@ -5,7 +5,9 @@
 }
 
 .chat-container form {
-  width: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .chat-window {
@@ -33,7 +35,8 @@
 .chat-input-div textarea {
   padding: 10px 10px;
   font-size: 1rem;
-  min-width: 500px;
+  width: auto;
+  flex: 1;
   border: 1px #E0E0E0 solid;
   outline: none;
   margin-right: 20px;

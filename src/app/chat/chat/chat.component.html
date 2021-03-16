@@ -17,10 +17,10 @@
       </div>
     </div>
   </div>
-  <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
-    <div class="chat-input-div">
+  <div class="chat-input-div">
+    <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
       <textarea formControlName="message" placeholder="Enter your message here" type="text" rows="1"></textarea>
       <button type="submit">Send</button>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
