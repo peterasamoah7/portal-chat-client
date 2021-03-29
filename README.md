@@ -69,7 +69,6 @@ To run the application locally, please follow the steps below.
 * [Angular CLI](https://cli.angular.io/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-
 ### Setup
 
 1. Clone the repo 
@@ -77,25 +76,24 @@ To run the application locally, please follow the steps below.
 3. Create a free Azure Account at [Azure](https://azure.microsoft.com/) or use an existing one. 
 4. Download and install Visual Studio Code from [Visual Studio Code](https://code.visualstudio.com/)
 5. Open project folder using visual studio.
-```
 
-### Running from Visual Studio Code
+### Running from Visual Studio
+
+Before running the client application you need to run the server application. Please see the Server repository for setup instructions [here](https://github.com/peterasamoah7/portal-chat-api)
 
 1. Install front end dependencies 
 ```sh
 npm install
 ```
-
-2. Run application 
- ```sh
+2. Run client application 
+```sh
 npm start
 ```
-<!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Please refer to the [demo]()
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
