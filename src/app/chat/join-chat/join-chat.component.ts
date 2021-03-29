@@ -27,7 +27,7 @@ export class JoinChatComponent implements OnInit {
 
   initJoinForm(){
     this.joinForm = new FormGroup({
-      'name': new FormControl('', [Validators.minLength(2)]),
+      'name': new FormControl(`user${Math.random()}`, [Validators.minLength(2)]),
       'lang': new FormControl(this.defaultLang, [Validators.required])
     });
   }
