@@ -50,7 +50,7 @@
 Portal Chat is a chat application that improves the overall chat experience by removing language constraints. Portal Chat provides real-time language translation so users can send and receive messages in their language of choice. 
 
 
-You can view the demo [here]()
+You can view the demo [here](https://youtu.be/8hoIWhCucrs)
 
 You can try the live application here [Live site](https://ashy-bay-0f647ba03.azurestaticapps.net)
 ### Built With
@@ -92,7 +92,7 @@ npm start
 
 ## Usage
 
-Please refer to the [demo]()
+Please refer to the [demo](https://youtu.be/8hoIWhCucrs)
 
 ## License
 
